@@ -1,0 +1,17 @@
+version: '3'
+services:
+  jupyter:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    command:
+      - 'jupyter'
+      - 'notebook'
+      - '--allow-root'
+      - '--ip=0.0.0.0'
+    working_dir: /jupyter
+    ports:
+      - 8888:8888
+    volumes:
+      - ./large_image:/large_image
+      - ./jupyter:/jupyter
