@@ -15,3 +15,5 @@ services:
     volumes:
       - ./large_image:/large_image
       - ./jupyter:/jupyter
+    environment:
+      - LARGE_IMAGE_JUPYTER_PROXY=/proxy/
