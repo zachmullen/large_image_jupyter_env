@@ -6,7 +6,7 @@ services:
       dockerfile: ./Dockerfile
     command:
       - 'jupyter'
-      - 'notebook'
+      - 'lab'
       - '--allow-root'
       - '--ip=0.0.0.0'
     working_dir: /jupyter
@@ -15,3 +15,5 @@ services:
     volumes:
       - ./large_image:/large_image
       - ./jupyter:/jupyter
+    environment:
+      - LARGE_IMAGE_JUPYTER_PROXY=/proxy/
