@@ -6,7 +6,7 @@ services:
       dockerfile: ./Dockerfile
     command:
       - 'jupyter'
-      - 'notebook'
+      - 'lab'
       - '--allow-root'
       - '--ip=0.0.0.0'
     working_dir: /jupyter
